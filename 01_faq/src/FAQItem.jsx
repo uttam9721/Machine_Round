@@ -3,7 +3,7 @@ import './App.css'
 const FAQItem = ({faq,index}) => {
     const [isShow , setIsShow] =useState(false);
     useEffect(()=>{
-        if(index == 0){
+        if(index ==-1){
             setIsShow(true);
         }
     })
