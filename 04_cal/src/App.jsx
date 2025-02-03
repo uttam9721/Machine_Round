@@ -37,21 +37,16 @@ const App = () => {
       alert('Invalid input'); // Alert the user if the input is invalid
     }
   };
-
-  // Render the calculator UI
   return (
     <div className="App">
       <h1>Calculator</h1>
       <form onSubmit={handleSubmit} action="">
-        <input onChange={handleChange} value={value} type="text" /> 
-        {/* Text input field for user to type values. Its value is controlled by the state */}
+        <input onChange={handleChange} value={value} type="text" />
       </form>
       <div className="container" onClick={handleClick}>
-        {/* Div container for buttons. Handles click events for all buttons */}
         {arr.map((item, idx) => (
           <button id={item} key={idx} className="cell">
-            {/* Map over the array to dynamically create buttons */}
-            {item} {/* Display the button's value */}
+            {item}
           </button>
         ))}
       </div>

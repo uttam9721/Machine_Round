@@ -1,42 +1,33 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Center the content */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a8b, #fad0c4); /* Soft gradient background */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.time-container {
+  background: #ffffff; /* White background for the container */
+  border: 2px solid #ddd; /* Light gray border */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 20px 40px; /* Inner padding for spacing */
+  text-align: center; /* Center the text inside */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.time-container:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.time-display {
+  font-size: 3rem; /* Large font size */
+  color: #333; /* Dark gray text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+  margin: 0;
+  line-height: 1.2;
 }

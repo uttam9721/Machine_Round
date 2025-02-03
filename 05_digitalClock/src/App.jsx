@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import './App.css';
 
 const App = () => {
   const curTime = new Date().toLocaleTimeString();
@@ -13,7 +14,9 @@ const App = () => {
   },1000)
   return (
     <div>
-      <h1>{time}</h1>
+       <div className="time-container">
+        <h1 className="time-display">{time}</h1>
+      </div>
      
     </div>
   )
