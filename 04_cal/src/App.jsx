@@ -2,11 +2,8 @@ import React, { useState } from 'react'; // Import React and the useState hook
 import './App.css'; // Import CSS file for styling
 
 const App = () => {
-  // Array of buttons to display on the calculator
   const arr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '+', '-', '*', '/', '=', 'C'];
-
-  // State to manage the calculator input/output
-  const [value, setValue] = useState(''); // 'value' stores the current input, and 'setValue' updates it
+  const [value, setValue] = useState('');
 
   // Handle user input from the text field
   const handleChange = (e) => {

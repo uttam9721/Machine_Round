@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar */
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #ff4e50, #f9d423);
+  padding: 15px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.line h1 {
+  color: white;
+  font-size: 24px;
+}
+
+.all {
+  display: flex;
+  gap: 20px;
+}
+
+.all a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.all a:hover {
+  color: #222;
+}
+
+/* Search Bar */
+.line input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.line button {
+  padding: 8px 12px;
+  border: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.line button:hover {
+  background: white;
+  color: black;
+}
+
+/* Category Buttons */
+.fit {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.fit button {
+  padding: 10px 15px;
+  border: none;
+  background: linear-gradient(45deg, #1e90ff, #ff6347);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.fit button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #ff6347, #1e90ff);
+}
+
+/* Card Section */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.news-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-card:hover {
+  transform: scale(1.05);
+}
+
+.news-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 15px;
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.news-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.news-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  text-decoration: none;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  width: 300px;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.light-card {
+  background: #ffffff;
+  color: #000000;
+}
+
+.dark-card {
+  background: #333333;  /* Dark background */
+  color: #ffffff;  /* White font color */
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: inherit; /* Text will match dark/light mode */
+}
+
+.card-content span {
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+.card-content a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+/* Light Mode Styles */
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  transition: background 0.3s ease-in-out;
+}
+
+/* ✅ Fixed Navbar */
+.navbar {
+  position: fixed; /* ✅ Keeps it on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #282c34;
+  color: white;
+  z-index: 1000; /* ✅ Ensures it stays above other elements */
+}
+
+/* Push content down to prevent overlap with navbar */
+.content {
+  margin-top: 80px; /* ✅ Adjust based on navbar height */
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.search-bar input {
+  padding: 8px;
+  margin-right: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.toggle-btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #ff9800;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.toggle-btn:hover {
+  background-color: #e68900;
+}
+
+/* Category Buttons */
+.categories {
+  margin: 20px;
+  text-align: center;
+}
+
+.categories button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+.categories button:hover {
+  background-color: #ff9800;
+  color: white;
+}

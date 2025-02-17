@@ -4,6 +4,13 @@
   align-items: center;
   justify-content: center;
 }
+.inn{
+  width: 15rem;
+  height: 50px;
+}
+input{
+  text-align: center;
+}
 
 .container {
   margin-top: 40px;
