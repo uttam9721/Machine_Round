@@ -8,10 +8,16 @@ const Todo = () => {
 
     const handlerChange=(e)=>{
       e.preventDefault();
+      if(value.trim=="") return;
       setData([...data,value])
       // console.log(...data)
       setValue("");
     }
+
+  const deleteItem = (e) => {
+  const updatedData = data.filter((_, curr) => curr !== e);
+  setData(updatedData);
+};
 
 
 
@@ -28,7 +34,7 @@ const Todo = () => {
       {data.map((item, idx) => (
   <div key={idx}>
     <p>{item}
-      <button className='ll'>delete</button>
+      <button className='ll' onClick={()=>deleteItem(idx)}>delete</button>
     </p>
     
   </div>
