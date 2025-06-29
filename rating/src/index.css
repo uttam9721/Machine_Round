@@ -1,0 +1,14 @@
+.app{
+    text-align: center;
+
+}
+.app span{
+    font-size: 60px;
+    cursor: pointer;
+}
+.colored{
+    color: rgb(255,128,0);
+}
+.unColor{
+    color: #000;
+}
